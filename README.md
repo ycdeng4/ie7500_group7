@@ -1,2 +1,5 @@
-# ie7500_group7
-ie7500_group7
+# IE7500 Group7
+## Project Objective
+
+
+
