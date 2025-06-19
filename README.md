@@ -5,4 +5,6 @@ This project seeks to solve the binary text classification problem of identifyin
 
 
 ## Literature Review
-**BERTweet** https://github.com/VinAIResearch/BERTweet
+**BERTweet** 
+https://aclanthology.org/2020.emnlp-demos.2/
+https://github.com/VinAIResearch/BERTweet
