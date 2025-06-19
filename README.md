@@ -8,3 +8,6 @@ This project seeks to solve the binary text classification problem of identifyin
 **BERTweet** 
 https://aclanthology.org/2020.emnlp-demos.2/
 https://github.com/VinAIResearch/BERTweet
+
+**DistilBERT**
+https://arxiv.org/pdf/1910.01108
