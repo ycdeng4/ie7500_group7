@@ -11,3 +11,5 @@ https://github.com/VinAIResearch/BERTweet
 
 **DistilBERT**
 https://arxiv.org/pdf/1910.01108
+
+**BERT**
