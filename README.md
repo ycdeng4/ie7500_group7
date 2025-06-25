@@ -13,3 +13,6 @@ https://github.com/VinAIResearch/BERTweet
 https://arxiv.org/pdf/1910.01108
 
 **BERT**
+https://github.com/ycdeng4/ie7500_group7/blob/26eef2eea1f1998aadd88150ec9977cdf71d5a9f/BERT-paper.pdf
+
+**Random Forest**
