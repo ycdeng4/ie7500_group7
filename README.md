@@ -17,3 +17,11 @@ https://github.com/ycdeng4/ie7500_group7/blob/26eef2eea1f1998aadd88150ec9977cdf7
 
 **Random Forest**
 https://github.com/ycdeng4/ie7500_group7/blob/8d9e36f417ad6b71402aa8832bc6f861e4f04806/Improved%20Random%20Forest%20Paper.pdf
+
+## Benchmarking
+
+| Model | Accuracy | F1-Score | Computational Efficiency |
+|---|---|---|---|
+| name | percentage | value | time |
+| name | percentage | value | time |
+
