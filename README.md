@@ -22,7 +22,7 @@ https://github.com/ycdeng4/ie7500_group7/blob/8d9e36f417ad6b71402aa8832bc6f861e4
 
 | Model | Accuracy | F1-Score | Computational Efficiency |
 |---|---|---|---|
-| BERTweet | 85% | value | ~7"00 |
+| BERTweet | 85% | value | ~ 7'00 |
 | name | percentage | value | time |
 | name | percentage | value | time |
 | name | percentage | value | time |
