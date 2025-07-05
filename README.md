@@ -25,7 +25,7 @@ https://github.com/ycdeng4/ie7500_group7/blob/8d9e36f417ad6b71402aa8832bc6f861e4
 | BERTweet | 84% | 85% | ~ 7'00 |
 | name | percentage | value | time |
 | name | percentage | value | time |
-| name | percentage | value | time |
+| Random Forest | 79% | 79% | 10 sec. |
 
 ## Model Implementation
 
