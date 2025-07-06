@@ -25,7 +25,7 @@ https://github.com/ycdeng4/ie7500_group7/blob/8d9e36f417ad6b71402aa8832bc6f861e4
 | BERTweet | 84% | 85% | ~ 7'00 |
 | DistilBERT | 85.11% | 81.8% | ~ 7'00 |
 | Random Forest | 79% | 79% | 10 sec. |
-|BERT|82%||~ 80'00|
+|BERT|84%||~ 80'00|
 ## Model Implementation
 
 ### Framework Selection (Channie)
