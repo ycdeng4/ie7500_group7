@@ -44,7 +44,7 @@ Modularity:
  
 • Easy to adapt for other classification tasks or swap in another transformer model.
 
-### Training & Fine-Tuning (Claire)
+### Training & Fine-Tuning
 
 To improve BERT model, we will conduct the following strategyies: 
 - clean and preprocess raw data to remove noisy which has been done in the current build
