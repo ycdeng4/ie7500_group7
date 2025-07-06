@@ -38,8 +38,9 @@ In order to prepare the dataset for training, several data preprocessing tasks a
 
 ### Training & Fine-Tuning (Claire)
 We modified the following training arguments set via TrainingArguments to improve accuracy:
-•Learning rate: 1e-5 (optimized for stability)
-•Epochs: 3 (can be increased for further tuning)
+
+•Learning rate: 1e-5 
+•Epochs: 3 
 Fixed parameter:
 • Batch size: 16
 • Weight decay: 0.01
