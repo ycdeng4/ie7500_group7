@@ -28,8 +28,8 @@ https://github.com/ycdeng4/ie7500_group7/blob/8d9e36f417ad6b71402aa8832bc6f861e4
 |BERT|84%||~ 80'00|
 ## Model Implementation
 
-### Framework Selection (Channie)
-Bert-base-uncased model from Hugging Face framwork. 
+### Framework Selection
+We use the bert-base-uncased model from Hugging Face because it is one of the most widely used and effective models for text classification.  
 
 ### Dataset Preparation
 In order to prepare the dataset for training, several data preprocessing tasks are applied. This stage involves converting all text to lowercase along with the removal of URLs, @ mentions, hashtag symbols, HTML entities, excess whitespace and punctuations. With regards to hashtags, only the symbols are removed while the text attached to the hashtags are kept since it contains important information for analysis.
