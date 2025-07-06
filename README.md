@@ -39,7 +39,7 @@ https://github.com/ycdeng4/ie7500_group7/blob/8d9e36f417ad6b71402aa8832bc6f861e4
 
 ### Training & Fine-Tuning (Claire)
 | No. | Epoch | Learning Rate | Cleaned text | Accuracy | F1 Score |
-|---|---|---|---|---|---|
+|:---:|:---:|:---:|:---:|:---:|:---:|
 | 1 | 3 | 2e-5 | N | TBD | 83% |
 | 2 | 3 | 2e-5 | Y | TBD | 84% |
 | 3 | 3 | 1e-5 | Y | TBD | 85% |
