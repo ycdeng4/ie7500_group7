@@ -36,7 +36,17 @@ In order to prepare the dataset for training, several data preprocessing tasks a
 
 ### Model Development (all)
 
-### Training & Fine-Tuning (Claire)
+### Training & Fine-Tuning (Claire)### Training & Fine-Tuning (Claire)
+We modified the following training arguments set via TrainingArguments to improve accuracy:
+	•	Learning rate: 1e-5 (optimized for stability)
+	•	Epochs: 3 (can be increased for further tuning)
+ Fixed parameter:
+  • Batch size: 16
+	•	Weight decay: 0.01
+	•	Logging and evaluation every epoch
+
+Below is the testing result: 
+
 | No. | Epoch | Learning Rate | Cleaned text | Accuracy | F1 Score |
 |:---:|:---:|:---:|:---:|:---:|:---:|
 | 1 | 3 | 2e-5 | N | 83% | 80.0% |
