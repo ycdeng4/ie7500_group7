@@ -30,7 +30,7 @@ https://github.com/ycdeng4/ie7500_group7/blob/8d9e36f417ad6b71402aa8832bc6f861e4
 ## Model Implementation
 
 ### Framework Selection (Channie)
-
+Hugging Face
 
 ### Dataset Preparation (Vy)
 
