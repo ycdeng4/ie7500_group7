@@ -47,7 +47,7 @@ Modularity:
 ### Training & Fine-Tuning
 
 To improve BERT model, we will conduct the following strategyies: 
-- clean and preprocess raw data to remove noisy which has been done in the current build
+- clean and preprocess raw data to remove noise as mentioned in the dataset preparation step
 - hyperparameter tuning including learning rate and epoch tuning
 
 
