@@ -49,20 +49,8 @@ num_train_steps = steps_per_epoch * 2
 optimizer, _ = create_optimizer(init_lr=2e-5, num_warmup_steps=0, num_train_steps=num_train_steps)
 model.compile(optimizer=optimizer, metrics=["accuracy"])
 
-class F1Callback(tf.keras.callbacks.Callback):
-    def on_epoch_end(self, epoch, logs=None):
-        y_true, y_pred = [], []
-        for batch in val_dataset:
-            inputs, labels = batch
-            logits = model(inputs, training=False).logits
-            preds = tf.argmax(logits, axis=-1).numpy()
-            y_pred.extend(preds)
-            y_true.extend(labels.numpy())
-        f1 = f1_score(y_true, y_pred, average="weighted")
-        print(f"\nEpoch {epoch + 1} F1 Score (Weighted): {f1:.4f}")
-
 start_time = time.time()
-model.fit(train_dataset, epochs=2, validation_data=val_dataset, callbacks=[F1Callback()])
+model.fit(train_dataset, epochs=2, validation_data=val_dataset)
 end_time = time.time()
 
 elapsed_time = end_time - start_time
@@ -71,4 +59,13 @@ print(f"\nTotal training time: {elapsed_time:.2f} seconds")
 loss, accuracy = model.evaluate(val_dataset)
 print(f"Validation Accuracy: {accuracy:.4f}")
 
-print(f"Validation Accuracy: {accuracy:.4f}")
+y_true, y_pred = [], []
+for batch in val_dataset:
+    inputs, labels = batch
+    logits = model(inputs, training=False).logits
+    preds = tf.argmax(logits, axis=-1).numpy()
+    y_pred.extend(preds)
+    y_true.extend(labels.numpy())
+
+f1 = f1_score(y_true, y_pred, average="weighted")
+print(f"Validation F1 Score (Weighted): {f1:.4f}")
