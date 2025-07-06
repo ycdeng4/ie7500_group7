@@ -36,9 +36,7 @@ In order to prepare the dataset for training, several data preprocessing tasks a
 
 ### Model Development (all)
 
-Model Chosen:
-
-• vinai/bertweet-base — a RoBERTa-based transformer pretrained on 850M English tweets.
+Model Chosen: vinai/bertweet-base — a RoBERTa-based transformer pretrained on 850M English tweets.
 
 Modularity:
 
