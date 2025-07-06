@@ -72,5 +72,5 @@ Below is the testing result:
 
 
 ### Evaluation & Metrics (Charlie)
-
+In order to measure how well these models correctly classify the tweets in the dataset, several evaluation metrics were used including accuracy and F1-score. These metrics were chosen due to the balance between correctly catching as many disaster related tweets as possible while also minimizing false positives. Accuracy tells us how often the model was correct overall, while the F1 score helps balance how many real disaster tweets it correctly identifies (recall) and how many false positives it avoids (precision). Both of these metrics are important for this use case of identifying disaster related tweets in emergency situations. We also measured how long it takes to run each model to identify the computational cost of each model. Based on our experimentation so far, it appears that the BERT models have higher accuracy and F1 scores, but they also have a higher computational cost when compared to the simpler random forest model. These results have guided us to proceed with refining one of the BERT models for future stages of this project.
 
