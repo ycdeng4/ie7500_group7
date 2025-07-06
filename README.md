@@ -40,10 +40,15 @@ In order to prepare the dataset for training, several data preprocessing tasks a
 We modified the following training arguments set via TrainingArguments to improve accuracy:
 
 •Learning rate: 1e-5 
+
 •Epochs: 3 
+
 Fixed parameter:
+
 • Batch size: 16
+
 • Weight decay: 0.01
+
 • Logging and evaluation every epoch
 
 Below is the testing result: 
