@@ -40,12 +40,12 @@ Hugging Face
 ### Training & Fine-Tuning (Claire)
 | No. | Epoch | Learning Rate | Cleaned text | Accuracy | F1 Score |
 |:---:|:---:|:---:|:---:|:---:|:---:|
-| 1 | 3 | 2e-5 | N | TBD | 83% |
-| 2 | 3 | 2e-5 | Y | TBD | 84% |
-| 3 | 3 | 1e-5 | Y | TBD | 85% |
-| 4 | 5 | 1e-5 | Y | TBD | 84% |
-| 5 | 3 | 5e-6 | Y | TBD | 85% |
-| 6 | 5 | 5e-6 | Y | TBD | 84% |
+| 1 | 3 | 2e-5 | N | 83% | 80.0% |
+| 2 | 3 | 2e-5 | Y | 84% | 81.2% |
+| 3 | 3 | 1e-5 | Y | 85% | 81.7% |
+| 4 | 5 | 1e-5 | Y | 84% | 80.8% |
+| 5 | 3 | 5e-6 | Y | 84% | 80.8% |
+| 6 | 5 | 5e-6 | Y | 84% | 80.6% |
 
 
 ### Evaluation & Metrics (Charlie)
