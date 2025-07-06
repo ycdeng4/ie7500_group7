@@ -1,0 +1,66 @@
+from transformers import TFBertForSequenceClassification, BertTokenizer, create_optimizer
+import tensorflow as tf
+import pandas as pd
+from sklearn.model_selection import train_test_split
+from sklearn.metrics import f1_score
+import time
+import numpy as np
+
+
+df = pd.read_csv("train.csv")
+train_texts, val_texts, train_labels, val_labels = train_test_split(
+    df["text"].tolist(), df["target"].tolist(), test_size=0.2, random_state=42
+)
+
+
+tokenizer = BertTokenizer.from_pretrained("bert-base-uncased")
+
+def create_dataset(texts, labels, tokenizer, batch_size=16):
+    tokens = tokenizer(texts, truncation=True, padding=True)
+    inputs = {
+        "input_ids": tf.convert_to_tensor(tokens["input_ids"]),
+        "attention_mask": tf.convert_to_tensor(tokens["attention_mask"]),
+        "token_type_ids": tf.convert_to_tensor(tokens.get("token_type_ids", [[0]*len(tokens["input_ids"][0])] * len(texts))),
+    }
+    dataset = tf.data.Dataset.from_tensor_slices((inputs, tf.convert_to_tensor(labels)))
+    return dataset.batch(batch_size)
+
+
+train_dataset = create_dataset(train_texts, train_labels, tokenizer)
+val_dataset = create_dataset(val_texts, val_labels, tokenizer)
+
+# Load model
+model = TFBertForSequenceClassification.from_pretrained("bert-base-uncased", num_labels=2)
+
+# Optimizer
+steps_per_epoch = len(train_dataset)
+num_train_steps = steps_per_epoch * 2  
+optimizer, _ = create_optimizer(init_lr=2e-5, num_warmup_steps=0, num_train_steps=num_train_steps)
+model.compile(optimizer=optimizer, metrics=["accuracy"])
+
+
+class F1Callback(tf.keras.callbacks.Callback):
+    def on_epoch_end(self, epoch, logs=None):
+        y_true, y_pred = [], []
+        for batch in val_dataset:
+            inputs, labels = batch
+            logits = model(inputs, training=False).logits
+            preds = tf.argmax(logits, axis=-1).numpy()
+            y_pred.extend(preds)
+            y_true.extend(labels.numpy())
+        f1 = f1_score(y_true, y_pred, average="weighted")
+        print(f"\nEpoch {epoch + 1} F1 Score (Weighted): {f1:.4f}")
+
+start_time = time.time()
+
+
+model.fit(train_dataset, epochs=2, validation_data=val_dataset, callbacks=[F1Callback()])
+
+
+end_time = time.time()
+elapsed_time = end_time - start_time
+print(f"\nTotal training time: {elapsed_time:.2f} seconds")
+
+
+loss, accuracy = model.evaluate(val_dataset)
+print(f"Validation Accuracy: {accuracy:.4f}")
