@@ -29,14 +29,22 @@ https://github.com/ycdeng4/ie7500_group7/blob/8d9e36f417ad6b71402aa8832bc6f861e4
 ## Model Implementation
 
 ### Framework Selection (Channie)
-Hugging Face 
+Bert-base-uncased model from Hugging Face framwork. 
 
 ### Dataset Preparation
 In order to prepare the dataset for training, several data preprocessing tasks are applied. This stage involves converting all text to lowercase along with the removal of URLs, @ mentions, hashtag symbols, HTML entities, excess whitespace and punctuations. With regards to hashtags, only the symbols are removed while the text attached to the hashtags are kept since it contains important information for analysis.
 
 ### Model Development
 
-Model Chosen: (Channie)
+Model Chosen: BERT (Bidirectional Encoder Representations from Transformers)
+
+Architecture: Base size (12 layers, 768 hidden units, 12 attention heads, ~110M parameters)
+
+Tokenizer: WordPiece tokenizer with lowercase preprocessing (i.e., uncased)
+
+Training Data: BookCorpus + English Wikipedia
+
+Use Case: General-purpose language understanding (text classification, QA, NER, etc.)
 
 Modularity:
 
