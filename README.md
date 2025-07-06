@@ -46,7 +46,9 @@ Modularity:
 
 ### Training & Fine-Tuning (Claire)
 
-To improve BERT model, we will conduct hyperparameter tuning in the future, including learning rate and epoch. 
+To improve BERT model, we will conduct the following strategyies: 
+- clean and preprocess raw data to remove noisy which has been done in the current build
+- hyperparameter tuning including learning rate and epoch tuning
 
 
 ### Evaluation & Metrics
